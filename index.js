@@ -73,10 +73,10 @@ client.on("messageCreate", msg => {
 // Functionalidad menu elegir rol
 const roles = ["1º ESO", "2º ESO", "3º ESO", "4º ESO", "1º BACH", "2º BACH", "IB"];
 
-client.on('interactionCreate', async interaction => {
+client.on("interactionCreate", async interaction => {
   if (!interaction.isStringSelectMenu()) return;
   
-  if (interaction.customId === 'elector-roles') {
+  if (interaction.customId === "elector-roles") {
     const selectedOption = interaction.values[0];
     
     const role = interaction.guild.roles.cache.find(role => role.name === selectedOption);
@@ -104,7 +104,7 @@ client.on('interactionCreate', async interaction => {
                 files: attachmentUrls
               });
             } catch (error) {
-              console.error('Error sending DM to user:', error);
+              console.error("Error sending DM to user:", error);
             }
           }
         }
