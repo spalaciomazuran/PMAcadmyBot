@@ -27,7 +27,7 @@ module.exports = (client, LogModule) => {
                   files: attachmentUrls
                 });
               } catch (error) {
-                await interaction.reply( {content: "No se han podido enviar las instrucciones, por favor comprueba si tienes los mds de este servidos activados", ephemeral: true} );
+                await interaction.reply( {content: "No se han podido enviar las instrucciones, por favor asegurate que tienes los mds de este servidos activados", ephemeral: true} );
                 await LogModule.logError(error, "Error sending DM to member", member.user.username);
                 console.error("Error sending DM to member:", error);
               }
